@@ -827,7 +827,53 @@ body {
     color: white;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .compact-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
 
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1.25rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.75rem;
+    }
+    
+    .compact-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .compact-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .subsection-title {
+        font-size: 1.5rem;
+    }
+    
+    .paperbill-tag {
+        font-size: 0.75rem;
+    }
+    
+    .compact-card {
+        padding: 1.25rem;
+    }
+    
+    .feature-icon {
+        font-size: 1.75rem;
+    }
+    
+    .compact-card h4 {
+        font-size: 1rem;
+    }
+}
 
 
 /* Add-ons Navigation Section */
