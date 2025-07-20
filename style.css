@@ -366,13 +366,12 @@ body {
     }
 }
 
-/* Mobile Responsive Styles (under 992px) */
+/* Mobile Responsive Styles (under 992px) - One Column Per Row */
 @media (max-width: 991px) {
     .features-section {
         width: 100%;
         margin-left: 0;
         padding: 60px 20px;
-        box-sizing: border-box;
     }
 
     .container {
@@ -380,24 +379,16 @@ body {
     }
 
     .image-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 30px;
         padding: 0;
     }
 
     .image-card {
+        width: 100%;
         height: auto;
-        min-height: 0;
-        padding: 20px;
-        margin: 0;
-    }
-
-    .image-card img {
-        height: 280px;
-    }
-
-    .image-caption {
-        padding: 20px 10px;
+        margin-bottom: 0;
     }
 }
 
@@ -405,18 +396,6 @@ body {
 @media (max-width: 575px) {
     .features-section {
         padding: 40px 15px;
-    }
-
-    .image-card img {
-        height: 220px;
-    }
-
-    .image-caption h3 {
-        font-size: 1.3rem;
-    }
-
-    .image-caption p {
-        font-size: 0.95rem;
     }
 }
 /* Video Section Styling */
