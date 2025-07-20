@@ -343,26 +343,26 @@ body {
 
 
 /* Wider Columns for Desktop */
-/* Wider Desktop Layout */
+/* Wider Desktop Layout 
 @media (min-width: 992px) {
     .features-section {
-        padding: 100px 5%; /* Increased side padding */
+        padding: 100px 5%; /* Increased side padding 
     }
     
     .image-grid {
-        grid-template-columns: repeat(2, minmax(46%, 1fr)); /* Nearly full-width columns */
-        gap: 4%; /* Percentage-based gap for fluidity */
-        max-width: none; /* Remove max-width constraint */
+        grid-template-columns: repeat(2, minmax(46%, 1fr)); /* Nearly full-width columns 
+        gap: 4%; /* Percentage-based gap for fluidity 
+        max-width: none; /* Remove max-width constraint 
         margin: 0 auto;
-        padding: 0 4%; /* Inner padding for content */
+        padding: 0 4%; /* Inner padding for content 
     }
     
     .image-card {
-        margin: 0 -2%; /* Negative margin to expand width */
+        margin: 0 -2%; /* Negative margin to expand width 
     }
     
     .image-card img {
-        height: 320px; /* Taller images for wider rows */
+        height: 320px; /* Taller images for wider rows 
     }
 }
 
