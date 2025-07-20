@@ -242,3 +242,34 @@ document.querySelectorAll('.star').forEach(star => {
     console.log(`User rated: ${value} stars`);
   });
 });
+
+// Enhanced Mobile Menu Toggle
+document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    const mobileNav = document.querySelector('.mobile-nav');
+    mobileNav.classList.toggle('active');
+    
+    // Toggle aria-expanded for accessibility
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !isExpanded);
+    
+    // Toggle hamburger icon
+    this.textContent = isExpanded ? '☰' : '✕';
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(e) {
+    const mobileNav = document.querySelector('.mobile-nav');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (!e.target.closest('.mobile-nav') && !e.target.closest('.mobile-menu-btn') && mobileNav.classList.contains('active')) {
+        mobileNav.classList.remove('active');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = '☰';
+    }
+});
+
+// Initialize aria attributes
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', 'false');
+    document.querySelector('.mobile-menu-btn').setAttribute('aria-label', 'Toggle menu');
+});

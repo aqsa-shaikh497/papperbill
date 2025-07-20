@@ -1569,3 +1569,174 @@ h2, h3, h4 {
     padding: 15px;
   }
 }
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 1024px) {
+    /* Tablet styles */
+    .feature-card {
+        width: 100% !important;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    .feature-card.reverse {
+        flex-direction: column;
+    }
+    
+    .feature-image img {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .compact-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-card {
+        height: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Small tablet styles */
+    .hero-content {
+        margin-top: 0;
+        padding: 0 20px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .compact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .feature-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .feature-content p {
+        font-size: 1rem;
+        padding-left: 15px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile styles */
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .compact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .feature-card {
+        margin-bottom: 40px;
+    }
+    
+    .image-card img {
+        height: 250px;
+    }
+    
+    .video-wrapper iframe {
+        height: 250px;
+    }
+    
+    .tab-buttons {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .content-wrapper {
+        padding: 20px;
+    }
+    
+    .feature-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+}
+
+/* Fix for mobile menu */
+@media (max-width: 767px) {
+    .desktop-nav {
+        display: none !important;
+    }
+    
+    .mobile-nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    .mobile-nav a {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1001;
+    }
+}
+
+/* Fix for feature cards on mobile */
+@media (max-width: 600px) {
+    .feature-card {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .feature-content, .feature-image {
+        padding: 0 15px;
+    }
+    
+    .feature-content h3, .feature-content p {
+        padding-left: 0;
+    }
+}
+
+/* Ensure images don't overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
