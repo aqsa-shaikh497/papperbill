@@ -138,23 +138,47 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', animateOnScroll);
 
   // ============ TAB SYSTEM ============
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  tabButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Remove active class from all buttons and contents
-      document.querySelectorAll('.tab-btn, .tab-content').forEach(el => {
-        el.classList.remove('active');
-      });
-      
-      // Add active class to clicked button
-      this.classList.add('active');
-      
-      // Show corresponding content
-      const tabId = this.getAttribute('data-tab');
-      document.getElementById(tabId).classList.add('active');
+document.addEventListener('DOMContentLoaded', function() {
+    // Tab System
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    // Function to switch tabs
+    function switchTab(tabId) {
+        // Remove active class from all buttons and contents
+        tabButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+        });
+        
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Add active class to clicked button and corresponding content
+        const activeButton = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+        const activeContent = document.getElementById(tabId);
+        
+        if (activeButton && activeContent) {
+            activeButton.classList.add('active');
+            activeButton.setAttribute('aria-selected', 'true');
+            activeContent.classList.add('active');
+        }
+    }
+    
+    // Add click event to tab buttons
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-tab');
+            switchTab(tabId);
+        });
     });
-  });
-
+    
+    // Initialize first tab as active by default
+    if (tabButtons.length > 0) {
+        tabButtons[0].setAttribute('aria-selected', 'true');
+    }
+});
   // ============ RATING SYSTEM ============
   document.querySelectorAll('.star').forEach(star => {
     // Display current average (4.83 = 96.6% of 5 stars)
