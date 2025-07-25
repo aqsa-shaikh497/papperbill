@@ -111,6 +111,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+//fixed button
+  document.querySelector('.floating-btn').addEventListener('click', function() {
+  // Add your download functionality here
+  window.location.href = '#download'; // or your download link
+});
+
   // ============ SCROLL ANIMATIONS ============
   function animateOnScroll() {
     const elements = document.querySelectorAll('.feature-card, .compact-card');
@@ -283,3 +289,44 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 });
+
+// ============ SLIDER FUNCTIONALITY ============
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const navButtons = document.querySelectorAll('.nav-btn');
+let autoSlideInterval;
+
+function updateSlider() {
+    document.querySelector('.slider').style.transform = `translateX(-${currentSlide * 100}%)`;
+    navButtons.forEach((btn, index) => {
+        btn.classList.toggle('active', index === currentSlide);
+    });
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+    resetAutoSlide();
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlider();
+}
+
+function toggleDetails(button) {
+    const details = button.nextElementSibling;
+    const isVisible = details.style.display === 'block';
+    details.style.display = isVisible ? 'none' : 'block';
+    button.textContent = isVisible ? 'Learn More' : 'Hide Details';
+}
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 5000); // Slide every 5 seconds
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+}

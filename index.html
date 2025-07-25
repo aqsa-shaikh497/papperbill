@@ -60,7 +60,14 @@ Paperbill’s user-friendly interface allows staff to quickly enter and process 
 </p>
                 </div>
             </div>
-            
+
+            <!-- Fixed Bottom Button -->
+<div class="fixed-bottom-btn">
+  <button class="floating-btn">
+    <i class="fas fa-download"></i> Download Now
+  </button>
+</div>
+<!--feature rows-->
             <div class="image-card">
                 <img src="table.png" alt="Smart Table Management Solution">
                 <div class="image-caption">
@@ -387,115 +394,122 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
     </div>
 </section>
 
-<section class="addons-container">
-        <div class="addons-header">
-            <h2>Supercharge Your Restaurant Software</h2>
-        </div>
-        
-        <div class="tabs-wrapper">
-            <div class="tab-buttons">
-                <button class="tab-btn active" data-tab="support">
-                    <i class="fas fa-headset"></i> Support
-                </button>
-                <button class="tab-btn" data-tab="operations">
-                    <i class="fas fa-cogs"></i> Operations
-                </button>
-                <button class="tab-btn" data-tab="loyalty">
-                    <i class="fas fa-award"></i> Loyalty
-                </button>
-                <button class="tab-btn" data-tab="analytics">
-                    <i class="fas fa-chart-line"></i> Analytics
-                </button>
+<section id="addons-section">
+        <h1>Supercharge Your Restaurant with Paperbill Add-ons</h1>
+        <div class="slider-container">
+            <div class="nav-buttons">
+                <button class="nav-btn active" onclick="goToSlide(0)">Support</button>
+                <button class="nav-btn" onclick="goToSlide(1)">Operations</button>
+                <button class="nav-btn" onclick="goToSlide(2)">Loyalty</button>
+                <button class="nav-btn" onclick="goToSlide(3)">Analytics</button>
             </div>
-            
-            <div class="tab-contents">
-                <!-- Support Tab -->
-                <div class="tab-content active" id="support">
-                    <div class="content-wrapper">
-                        <div class="content-text">
-                            <h3>24/7 Customer Support</h3>
-                            <p>Get round-the-clock assistance from our dedicated support team for all your restaurant software needs.</p>
-                            <ul class="benefits-list">
-                                <li><i class="fas fa-check"></i> Free unlimited support</li>
-                                <li><i class="fas fa-check"></i> Multilingual support team</li>
-                                <li><i class="fas fa-check"></i> Instant chat and email</li>
-                            </ul>
-                            <a href="#" class="cta-btn">
-                                <i class="fas fa-phone"></i> Contact Support
-                            </a>
-                        </div>
-                        <div class="content-image">
-                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Support Team">
-                        </div>
+            <div class="slider">
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Support</h2>
+                        <p>Get round-the-clock assistance to keep your restaurant operations running smoothly with Vyapar’s dedicated support add-ons.</p>
+                        <h3>24/7 Customer Support</h3>
+                        <ul>
+                            <li>Free unlimited support for all restaurant software queries.</li>
+                            <li>Multilingual support team for seamless communication.</li>
+                            <li>Instant chat and email assistance for quick resolutions.</li>
+                        </ul>
+                        <button onclick="window.location.href='https://vyaparapp.in/contact'">Contact Support</button>
+                    </div>
+                    <div class="slide-image">
+                        <img src="images/support.jpg" alt="Customer Support">
                     </div>
                 </div>
-                
-                <!-- Operations Tab -->
-                <div class="tab-content" id="operations">
-                    <div class="content-wrapper">
-                        <div class="content-text">
-                            <h3>Operations Management</h3>
-                            <p>Streamline your restaurant operations with our powerful management tools.</p>
-                            <ul class="benefits-list">
-                                <li><i class="fas fa-check"></i> Real-time inventory tracking</li>
-                                <li><i class="fas fa-check"></i> Automated staff scheduling</li>
-                                <li><i class="fas fa-check"></i> Comprehensive reporting</li>
-                            </ul>
-                            <a href="#" class="cta-btn">
-                                <i class="fas fa-tools"></i> View Features
-                            </a>
-                        </div>
-                        <div class="content-image">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Operations Dashboard">
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Loyalty Tab -->
-                <div class="tab-content" id="loyalty">
-                    <div class="content-wrapper">
-                        <div class="content-text">
-                            <h3>Customer Loyalty Programs</h3>
-                            <p>Build lasting relationships with your customers through rewarding loyalty programs.</p>
-                            <ul class="benefits-list">
-                                <li><i class="fas fa-check"></i> Custom reward points system</li>
-                                <li><i class="fas fa-check"></i> Targeted email campaigns</li>
-                                <li><i class="fas fa-check"></i> Special promotions engine</li>
-                            </ul>
-                            <a href="#" class="cta-btn">
-                                <i class="fas fa-medal"></i> Learn More
-                            </a>
-                        </div>
-                        <div class="content-image">
-                            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Loyalty Program">
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Operations</h2>
+                        <p>Streamline your restaurant’s workflow with mobile-responsive operational add-ons integrated with Vyapar’s core features.</p>
+                        <h3>QR Code Ordering Platform</h3>
+                        <ul>
+                            <li>Contactless menu access and payments via QR codes.</li>
+                            <li>Integrates with Digital Menu Management and KOT systems.</li>
+                            <li>Mobile-responsive for iOS and Android devices.</li>
+                        </ul>
+                        <h3>Third-Party Aggregator Integration</h3>
+                        <ul>
+                            <li>Manage Zomato, Swiggy, and Uber Eats orders in one dashboard.</li>
+                            <li>Track commissions and payouts on mobile devices.</li>
+                            <li>Syncs with Vyapar’s Online Store for seamless operations.</li>
+                        </ul>
+                        <h3>Kitchen Display System (KDS)</h3>
+                        <ul>
+                            <li>Real-time order display on kitchen tablets or smartphones.</li>
+                            <li>Reduces errors and speeds up preparation.</li>
+                            <li>Integrates with Multiple Kitchen Management.</li>
+                        </ul>
+                        <button onclick="toggleDetails(this)">Learn More</button>
+                        <div class="details" style="display: none;">
+                            <p>These add-ons enhance Vyapar’s Order Management, Table Management, and KOT features, ensuring efficient operations across all restaurant sizes.</p>
                         </div>
                     </div>
+                    <div class="slide-image">
+                        <img src="images/operations.jpg" alt="Restaurant Operations">
+                    </div>
                 </div>
-                
-                <!-- Analytics Tab -->
-                <div class="tab-content" id="analytics">
-                    <div class="content-wrapper">
-                        <div class="content-text">
-                            <h3>Business Analytics</h3>
-                            <p>Make data-driven decisions with our comprehensive analytics dashboard.</p>
-                            <ul class="benefits-list">
-                                <li><i class="fas fa-check"></i> Sales trends visualization</li>
-                                <li><i class="fas fa-check"></i> Customer behavior analysis</li>
-                                <li><i class="fas fa-check"></i> Real-time performance metrics</li>
-                            </ul>
-                            <a href="#" class="cta-btn">
-                                <i class="fas fa-chart-bar"></i> See Demo
-                            </a>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Loyalty</h2>
+                        <p>Build stronger customer relationships with mobile-responsive loyalty add-ons that drive repeat business.</p>
+                        <h3>Customer Loyalty & CRM Integration</h3>
+                        <ul>
+                            <li>Track customer preferences and personalize promotions.</li>
+                            <li>Send SMS/WhatsApp-based rewards via mobile.</li>
+                            <li>Collect feedback to improve service quality.</li>
+                        </ul>
+                        <h3>Contactless Menu & Feedback System</h3>
+                        <ul>
+                            <li>Multilingual digital menus accessible on customer devices.</li>
+                            <li>Gather 5-star reviews and feedback via mobile surveys.</li>
+                            <li>Integrates with Vyapar’s Client Management.</li>
+                        </ul>
+                        <button onclick="toggleDetails(this)">Learn More</button>
+                        <div class="details" style="display: none;">
+                            <p>Enhance Vyapar’s Loyalty Management with targeted campaigns and seamless customer engagement tools.</p>
                         </div>
-                        <div class="content-image">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="Analytics Dashboard">
+                    </div>
+                    <div class="slide-image">
+                        <img src="images/loyalty.jpg" alt="Customer Loyalty">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Analytics</h2>
+                        <p>Unlock actionable insights with mobile-responsive analytics add-ons to optimize your restaurant’s performance.</p>
+                        <h3>Advanced Analytics & Reporting</h3>
+                        <ul>
+                            <li>Track sales, top items, and peak hours on mobile devices.</li>
+                            <li>Customizable reports in PDF/Excel formats.</li>
+                            <li>Enhances Vyapar’s Profit & Loss Report.</li>
+                        </ul>
+                        <h3>Recipe & Wastage Management</h3>
+                        <ul>
+                            <li>Standardize recipes and track ingredient usage.</li>
+                            <li>Reduce waste with mobile-accessible analytics.</li>
+                            <li>Integrates with Low Stock & Expiry Alerts.</li>
+                        </ul>
+                        <h3>Supplier & Vendor Management</h3>
+                        <ul>
+                            <li>Track purchase orders and supplier ledgers on mobile.</li>
+                            <li>Optimize procurement costs with real-time data.</li>
+                            <li>Syncs with Vyapar’s Inventory Management.</li>
+                        </ul>
+                        <button onclick="toggleDetails(this)">Learn More</button>
+                        <div class="details" style="display: none;">
+                            <p>These add-ons provide data-driven insights to enhance decision-making and profitability.</p>
                         </div>
+                    </div>
+                    <div class="slide-image">
+                        <img src="images/analytics.jpg" alt="Analytics Dashboard">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
 
   <!-- Business Owner CTA -->
@@ -521,7 +535,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         Which software is used for billing in restaurants?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>PaperBill is one of the best billing software used for billing in restaurants available in both Desktop plus mobile devices. So that customers can sync their devices and can be able to access their data anytime anywhere. As well as, it provides a complete solution for a Restaurant Billing System including Billing, Accounting, Inventory management.</p>
@@ -532,7 +545,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         What is restaurant billing software?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Restaurant billing software is a digital tool designed to streamline the billing process in restaurants. It helps restaurant owners and managers keep track of orders, generate bills, process payments, and maintain records of sales and transactions.</p>
@@ -543,7 +555,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         Why do restaurants need billing software?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Billing software can help restaurants save time, reduce errors, and improve accuracy when processing orders and generating bills. It can also help streamline payment processing and keep track of sales and revenue.</p>
@@ -554,7 +565,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         What are the key features of restaurant billing software?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Key features of restaurant billing software include order management, table management, menu customization, inventory tracking, payment processing, and reporting and analytics.</p>
@@ -565,7 +575,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         Is PaperBill restaurant billing system secure?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Yes, PaperBill restaurant billing system is designed with security in mind, with features such as data encryption, user authentication, and backup and recovery options to protect sensitive information and prevent unauthorized access.</p>
@@ -576,7 +585,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         How can restaurant billing software benefit my business?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Restaurant billing software can help businesses save time and money by streamlining the billing process, improving accuracy, and providing insights into sales and revenue. It can also help improve customer service and satisfaction by making the billing process faster and more efficient.</p>
@@ -587,7 +595,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         Can PaperBill's food court billing software handle multiple outlets in a food court?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Yes, PaperBill's food court billing software is perfect for managing multiple outlets in a food court. The software helps you streamline billing for each counter, track sales separately, and generate comprehensive reports for better performance management. It ensures efficient coordination and smooth operations across the outlets.</p>
@@ -598,7 +605,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         Is there a fast food billing software free download available for trial?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Yes, PaperBill offers a fast food billing software free download option, allowing restaurant owners to try the software before committing. You can explore its features, such as quick billing, inventory management, and reporting, to see how it can benefit your fast food business.</p>
@@ -609,7 +615,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         How does food billing software simplify inventory management for restaurants?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>PaperBill's food billing software integrates billing with inventory management, allowing restaurants to track ingredients, manage stock levels, and receive alerts when stock is low. This feature helps reduce wastage and ensures that your restaurant always has the necessary items available.</p>
@@ -620,7 +625,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         What features does PaperBill's fast food billing software offer for busy restaurants?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>PaperBill's fast food billing software offers features like quick invoicing, multiple payment modes, integration with printers for kitchen orders, and real-time reports. These features are tailored to meet the needs of fast-paced environments, ensuring smooth order processing and customer satisfaction.</p>
@@ -631,7 +635,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         How can food court billing software improve operations in large food courts?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>PaperBill's food court billing software centralizes billing for all outlets, making it easier to manage each food stall's sales and inventory. You can generate sales reports for each outlet, track overall food court performance, and offer customers multiple payment options, enhancing operational efficiency.</p>
@@ -642,7 +645,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         Can I manage online orders with PaperBill's fast food billing software?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Yes, PaperBill's fast food billing software integrates with online ordering systems, allowing you to manage both in-store and online orders from a single platform. This ensures smooth operations, even during peak hours, by automating order tracking and invoicing.</p>
@@ -653,7 +655,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         What features make PaperBill's cafe billing software ideal for cafes?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>PaperBill's cafe billing software includes features like fast billing, integration with thermal printers, customizable receipts, multiple payment modes, and inventory tracking. These features help cafe owners speed up the billing process and efficiently manage day-to-day operations.</p>
@@ -664,7 +665,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         Does PaperBill's cafe billing software support mobile billing?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Yes, PaperBill's cafe billing software supports mobile billing, allowing cafe owners to process orders and payments directly from a mobile device. This flexibility is particularly useful in small cafes where space and time efficiency are crucial.</p>
@@ -675,7 +675,6 @@ This free mobile billing feature helps reduce errors, speed up service, and keep
                 <div class="faq-item">
                     <button class="faq-question">
                         Is PaperBill's cafe billing software easy to use for small cafes?
-                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Absolutely! PaperBill's cafe billing software is designed with user-friendliness in mind. Even small cafes with minimal technical knowledge can easily navigate its features, set up billing, and start managing orders and inventory without any hassle.</p>
