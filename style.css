@@ -75,7 +75,7 @@ header {
     padding: 0 20px;
     position: relative;
         background: 
-        linear-gradient(rgba(248, 249, 250, 0.4), rgba(248, 249, 250, 0.4)),
+        linear-gradient(rgba(19, 73, 126, 0.4), rgba(41, 55, 69, 0.4)),
         url('bg1.jpg') no-repeat center center;
     background-size: cover;
 
@@ -91,7 +91,7 @@ header {
     font-family: var(--heading-font);
     font-size: 3.6rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--white);
     text-align: center;
     font-family: popins;
     font-weight: 1000;
@@ -105,7 +105,7 @@ header {
     line-height: 1.8;
     margin: 0 auto 2.5rem;
     max-width: 700px;
-    color: var(--black);
+    color: var(--white);
     text-align: center;
     font-family: popins;
     font-weight: 900;
@@ -239,41 +239,71 @@ header {
 }
 
 /* Fixed Bottom Button Styles */
-.fixed-bottom-btn {
+/* Rectangular Fixed Button Styles */
+.rectangular-fixed-btn {
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
   z-index: 1000;
+  padding: 0 20px;
 }
 
-.floating-btn {
-  padding: 12px 24px;
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  color: white;
+.rectangular-btn {
+  width: 280px; /* Wider rectangular shape */
+  height: 80px; /* Shorter height */
+  background: var(--white);
+  color: var(--black);
   border: none;
-  border-radius: 50px;
+  border-radius: 8px; /* Slightly rounded corners */
   font-weight: 600;
+  font-size: 1.2rem;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+  box-shadow: var(--light-gray);
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 12px;
   transition: all 0.3s ease;
 }
 
-.floating-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+.rectangular-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.5);
 }
 
-.floating-btn i {
-  font-size: 1.1rem;
+.rectangular-btn i {
+  font-size: 1.5rem;
 }
 
-/* Features Section */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .rectangular-btn {
+    width: 240px;
+    height: 70px;
+    font-size: 1.1rem;
+  }
+  
+  .rectangular-btn i {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rectangular-btn {
+    width: 200px;
+    height: 60px;
+    font-size: 1rem;
+    gap: 8px;
+  }
+  
+  .rectangular-btn i {
+    font-size: 1.1rem;
+  }
+}
+
 /* Features Section */
 .features-section {
     padding: 80px 0;
@@ -291,7 +321,7 @@ header {
 .feature-title {
     text-align: center;
     font-size: 2.6rem;
-    color: var(--white) ;
+    color: var(--white);
     margin-bottom: 80px;
     font-weight: 700;
     font-family: 'Playfair Display', serif;
@@ -313,15 +343,16 @@ header {
     transition: all 0.3s ease;
     box-shadow: rgb(16, 14, 14); /* Remove outer shadow from card */
     transition: all 0.3s ease;
+    background: var(--primary-color);
     display: flex;
     flex-direction: column;
     padding: 30px; /* Remove padding to let image touch card edges */
+    border: 1px solid #f0f0f0; /* Optional subtle border */
     box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Outer shadow */
     position: relative;
     z-index: 1;
+    border: 1px solid rgba(0,0,0,0.05); /* Subtle border */
     height: 900px;
-    background: var(--light-gray);
-    border: 1px solid var(--medium-gray);
 }
 
 .image-card:hover {
@@ -352,12 +383,8 @@ header {
     flex-direction: column;
 }
 
-.feature-title{
-    color: var(--white);
-}
-
 .image-caption h3 {
-    color: #080100;
+    color:var(--white);
     margin: 0 0 20px 0;
     font-size: 1.5rem;
     font-weight: 600;
@@ -365,37 +392,10 @@ header {
 }
 
 .image-caption p {
-    color: #555;
+    color: var(--light-gray);
     margin: 0;
     line-height: 1.7;
     font-size: 1.05rem;
-}
-
-
-/* Mobile Responsive Styles (under 992px) - One Column Per Row */
-@media (max-width: 991px) {
-    .features-section {
-        width: 100%;
-        margin-left: 0;
-        padding: 60px 20px;
-    }
-
-    .container {
-        padding: 0;
-    }
-
-    .image-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        padding: 0;
-    }
-
-    .image-card {
-        width: 100%;
-        height: auto;
-        margin-bottom: 0;
-    }
 }
 
 /* Small Mobile Optimization (under 576px) */
@@ -563,7 +563,7 @@ h2, h3, h4 {
     margin-bottom: 60px;
     background: var(--light-gray);
     
-    border-radius: 20px;
+    border-radius: 18px;
     
 }
 
