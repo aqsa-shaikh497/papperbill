@@ -1,0 +1,73 @@
+$('body').keydown(function(e) {
+    if (e.which == 27 && !$('#myModal').is(":hidden")) {
+        window.open(localStorage.getItem('v-invoice-link'));
+        $('#myModal').modal('hide');
+    }
+});
+$(document).on('click', '.formats-download', function(e) {
+    e.preventDefault();
+    $('#phone-number').val('');
+  	$('.modal').modal('hide');
+    let link = $(this).find('a:first').attr('href');
+    console.log(link);
+    localStorage.setItem("v-invoice-link", link)
+    if (localStorage.getItem('phoneNumber') === null) {
+        $('#myModal').modal('show');
+        $('#cancel').off().on('click', () => {
+            window.open(link);
+            $('#myModal').modal('hide');
+        });
+        $('#submit').off().on('click', () => {
+            let phoneNumber = $.trim($('#phone-number').val());
+            let invoiceType = $.trim($('#format_type').text())
+            const pageUrl = window.location.href;
+            let pageName;
+            if (pageUrl) {
+                pageName = pageUrl.split('/')?.[3]?.split('#')?.[0];
+            }
+            if ((phoneNumber.length == 10 && parseInt(phoneNumber[0]) != 0) || (phoneNumber.length === 11 && parseInt(phoneNumber[0]) == 0)) {
+                $('#spinner').toggleClass('d-none');
+                $('#submit').hide();
+                $('#cancel').off();
+                $('#cancel').css("visibility", "hidden");
+                $.ajax({
+                    url: '/martinging-invoice-page-lead/mrkt-inv-format',
+                    type: 'POST',
+                    data: {
+                        "phone": phoneNumber,
+                        "name": `mrkt inv format page ${invoiceType}`,
+                        pageName
+                    },
+                    success: function(res) {
+                        localStorage.setItem('phoneNumber', '1');
+                        $('#spinner').toggleClass('d-none');
+                        $('#submit').show();
+                        $('#cancel').css("visibility", "visible");
+                        $('#cancel').on('click', () => {
+                            window.open(link);
+                            $('#myModal').modal('hide');
+                        });
+                        $('#myModal').modal('hide');
+                        window.open(link);
+                    },
+                    error: function(err) {
+                        $('#spinner').toggleClass('d-none');
+                        $('#submit').show();
+                        $('#cancel').css("visibility", "visible");
+                        $('#cancel').on('click', () => {
+                            window.open(link);
+                            $('#myModal').modal('hide');
+                        });
+                        $('#myModal').modal('hide');
+                        window.open(link);
+                    },
+                });
+            } else {
+                $('#myModal').modal('hide');
+                window.open(link);
+            }
+        });
+    } else {
+        window.open(link);
+    }
+});

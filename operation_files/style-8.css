@@ -1,0 +1,9 @@
+.iti--separate-dial-code .iti__selected-flag {
+	background-color: white;
+}
+.form-group {
+	.iti--allow-dropdown input {
+		width: 100%;
+		background: white;
+	}
+}

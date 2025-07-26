@@ -217,6 +217,59 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  document.querySelectorAll('.star').forEach(star => {
+    // Display current average rating (4.83)
+    const averageRating = 4.83;
+    const starValue = parseInt(star.dataset.value);
+    
+    // Full stars for whole numbers
+    if (starValue <= Math.floor(averageRating)) {
+        star.classList.add('active');
+    } 
+    // Partial star for decimal
+    else if (starValue === Math.ceil(averageRating)) {
+        const percentage = (averageRating - Math.floor(averageRating)) * 100;
+        star.innerHTML = '★';
+        star.style.position = 'relative';
+        star.style.display = 'inline-block';
+        star.style.color = '#ccc'; // Base color
+        
+        // Create partial fill effect
+        star.innerHTML += `<span style="position: absolute; left: 0; top: 0; width: ${percentage}%; overflow: hidden; color: #FFD700;">★</span>`;
+    }
+    
+    // Interactive rating
+    star.addEventListener('click', function() {
+        const value = parseInt(this.dataset.value);
+        const stars = document.querySelectorAll('.star');
+        const ratingDisplay = document.querySelector('.current-rating .average');
+        const thankYou = document.querySelector('.thank-you');
+        
+        // Update visual stars
+        stars.forEach((s, index) => {
+            s.classList.toggle('active', index < value);
+            s.style.color = '';
+            s.innerHTML = '★'; // Reset partial stars
+            
+            // Remove any existing partial star spans
+            if (s.querySelector('span')) {
+                s.querySelector('span').remove();
+            }
+        });
+        
+        // Update displayed rating
+        ratingDisplay.textContent = value.toFixed(2);
+        
+        // Show thank you message
+        thankYou.classList.add('show');
+        setTimeout(() => thankYou.classList.remove('show'), 2000);
+        
+        console.log(`User rated: ${value} stars`);
+        
+        // Here you would typically send the rating to your server
+        // sendRatingToServer(value);
+    });
+});
   // ============ FAQ ACCORDION ============
 document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq-item');
@@ -292,41 +345,79 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ============ SLIDER FUNCTIONALITY ============
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const navButtons = document.querySelectorAll('.nav-btn');
-let autoSlideInterval;
+document.addEventListener('DOMContentLoaded', function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const navButtons = document.querySelectorAll('.nav-btn');
+    let autoSlideInterval;
+    const SLIDE_INTERVAL = 3000;
+    // 3 seconds
 
-function updateSlider() {
-    document.querySelector('.slider').style.transform = `translateX(-${currentSlide * 100}%)`;
-    navButtons.forEach((btn, index) => {
-        btn.classList.toggle('active', index === currentSlide);
+    // Initialize slider on page load
+    function initSlider() {
+        updateSlider();
+        startAutoSlide();
+        
+        // Optional: Pause on hover for better UX
+        const sliderContainer = document.querySelector('.slider-container');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', pauseAutoSlide);
+            sliderContainer.addEventListener('mouseleave', resumeAutoSlide);
+        }
+    }
+
+    function updateSlider() {
+        const slider = document.querySelector('.slider');
+        if (slider) {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        navButtons.forEach((btn, index) => {
+            btn.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+        resetAutoSlide();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlider();
+    }
+
+    function startAutoSlide() {
+        if (!autoSlideInterval) {
+            autoSlideInterval = setInterval(nextSlide, SLIDE_INTERVAL);
+        }
+    }
+
+    function pauseAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+    }
+
+    function resumeAutoSlide() {
+        if (!autoSlideInterval) {
+            startAutoSlide();
+        }
+    }
+
+    function resetAutoSlide() {
+        pauseAutoSlide();
+        startAutoSlide();
+    }
+
+    // Initialize everything when page loads
+    initSlider();
+
+    // Add click handlers for navigation buttons
+    navButtons.forEach((button, index) => {
+        button.addEventListener('click', () => goToSlide(index));
     });
-}
 
-function goToSlide(index) {
-    currentSlide = index;
-    updateSlider();
-    resetAutoSlide();
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    updateSlider();
-}
-
-function toggleDetails(button) {
-    const details = button.nextElementSibling;
-    const isVisible = details.style.display === 'block';
-    details.style.display = isVisible ? 'none' : 'block';
-    button.textContent = isVisible ? 'Learn More' : 'Hide Details';
-}
-
-function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSlide, 5000); // Slide every 5 seconds
-}
-
-function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    startAutoSlide();
-}
+    // Optional: Clean up interval when leaving page
+    window.addEventListener('beforeunload', pauseAutoSlide);
+});

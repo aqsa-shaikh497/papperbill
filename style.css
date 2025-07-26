@@ -309,7 +309,7 @@ header {
     padding: 80px 0;
     width: 100vw; /* Full viewport width */
     margin-left: calc(-50vw + 50%); /* Center-align the full-width section */
-    background-color: #f9f9f9; /* Match your existing background */
+    background-color: var(--white); /* Match your existing background */
 }
 
 .container {
@@ -404,6 +404,10 @@ header {
         padding: 40px 15px;
     }
 }
+
+    .feature-title {
+        color: var(--white) !important;
+    }
 /* Video Section Styling */
 .video-section {
     padding: 80px 0;
@@ -1611,7 +1615,11 @@ h2, h3, h4 {
   padding: 0 5px;
 }
 
-.star:hover,
+.star:hover{
+      color: #FFD700;
+  transform: scale(1.1);
+}
+
 .star.active {
   color: #FFD700;
   transform: scale(1.1);
@@ -1642,7 +1650,7 @@ h2, h3, h4 {
 .thank-you {
   margin-top: 25px;
   font-size: 1.2rem;
-  color: #27ae60;
+  color: #07100b;
   font-style: italic;
   opacity: 0;
   transition: opacity 0.5s;
@@ -1773,7 +1781,7 @@ h2, h3, h4 {
     .feature-title {
         font-size: 2rem;
         margin-bottom: 40px;
-        color: var(--primary-color);
+        color: var(--white);
 
     }
 }
