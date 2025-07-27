@@ -333,7 +333,7 @@ header {
      display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px; /* Increased gap for wider columns */
-    padding: 20px; /* Added side padding */
+    padding: 0px; /* Added side padding */
 }
 
 .image-card {
@@ -399,15 +399,7 @@ header {
 }
 
 /* Small Mobile Optimization (under 576px) */
-@media (max-width: 575px) {
-    .features-section {
-        padding: 40px 15px;
-    }
-}
 
-    .feature-title {
-        color: var(--white) !important;
-    }
 /* Video Section Styling */
 .video-section {
     padding: 80px 0;
@@ -473,14 +465,7 @@ header {
 /* boost */
 
 /* Global Styles */
-:root {
-    --primary: #4f46e5;
-    --primary-dark: #4338ca;
-    --secondary: #e11d48;
-    --dark: #1e293b;
-    --light: #f8fafc;
-    --gray: #64748b;
-}
+
 
 * {
     margin: 0;
@@ -683,14 +668,6 @@ h2, h3, h4 {
 
 
 /* Global Styles */
-:root {
-    --primary: #4f46e5;
-    --primary-dark: #4338ca;
-    --secondary: #e11d48;
-    --dark: #1e293b;
-    --light: #f8fafc;
-    --gray: #64748b;
-}
 
 
 
@@ -835,7 +812,7 @@ h2, h3, h4 {
 
 @media (max-width: 768px) {
     .container {
-        padding: 2rem 1.25rem;
+        padding: 0px;
     }
     
     .subsection-title {
@@ -1858,7 +1835,7 @@ img {
     }
     
     .container {
-        padding: 0 30px;
+        padding: 10px;
     }
 }
 
@@ -1918,6 +1895,7 @@ img {
     .feature-title {
         font-size: 2rem;
         margin-bottom: 40px;
+        color: var(--white);
     }
     
     .section-title {
@@ -2014,6 +1992,7 @@ img {
     
     .feature-title {
         font-size: 1.8rem;
+        color: var(--white);
     }
     
     .section-title {
