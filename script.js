@@ -270,23 +270,49 @@ document.addEventListener('DOMContentLoaded', function() {
         // sendRatingToServer(value);
     });
 });
-  // ============ FAQ ACCORDION ============
-document.addEventListener('DOMContentLoaded', function() {
+
+        // FAQ accordion functionality//
+document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');
     
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         
+        // Add toggle icon if it doesn't exist
+        if (!question.querySelector('.toggle-icon')) {
+            const icon = document.createElement('span');
+            icon.className = 'toggle-icon';
+            icon.textContent = '+';
+            question.appendChild(icon);
+        }
+        
         question.addEventListener('click', () => {
-            // Close other open items
+            // Close all other items
             faqItems.forEach(otherItem => {
-                if (otherItem !== item && otherItem.classList.contains('active')) {
+                if (otherItem !== item) {
                     otherItem.classList.remove('active');
+                    const otherIcon = otherItem.querySelector('.toggle-icon');
+                    if (otherIcon) {
+                        otherIcon.textContent = '+';
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
                 }
             });
             
             // Toggle current item
             item.classList.toggle('active');
+            
+            // Update icon
+            const icon = question.querySelector('.toggle-icon');
+            if (icon) {
+                if (item.classList.contains('active')) {
+                    icon.textContent = '×'; // or '−' for minus
+                    icon.style.transform = 'rotate(45deg)';
+                } else {
+                    icon.textContent = '+';
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            }
         });
     });
 });
@@ -421,3 +447,112 @@ document.addEventListener('DOMContentLoaded', function() {
     // Optional: Clean up interval when leaving page
     window.addEventListener('beforeunload', pauseAutoSlide);
 });
+
+
+// Tab functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // FAQ accordion functionality//
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const track = document.querySelector('.view-track');
+    const views = document.querySelectorAll('.software-view');
+    let currentIndex = 0;
+    let autoSlideInterval;
+    const slideDuration = 3000; // 3 seconds per slide
+
+    // Initialize
+    updateSlidePosition();
+    startAutoSlide();
+
+    // Tab click event
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            currentIndex = index;
+            updateActiveTab();
+            updateSlidePosition();
+            resetAutoSlide();
+        });
+    });
+
+    function updateSlidePosition() {
+        // Apply smooth transition for normal slides
+        track.style.transition = 'transform 0.6s ease-in-out';
+        track.style.transform = `translateX(-${currentIndex * 25}%)`;
+        
+        // Check if we need to loop (after last slide)
+        if (currentIndex >= views.length) {
+            setTimeout(() => {
+                // Disable transition for instant reset
+                track.style.transition = 'none';
+                currentIndex = 0;
+                track.style.transform = 'translateX(0%)';
+                updateActiveTab();
+                
+                // Force reflow and re-enable transition
+                void track.offsetWidth;
+                track.style.transition = 'transform 0.6s ease-in-out';
+            }, 600); // Wait for the slide animation to finish
+        }
+    }
+
+    function updateActiveTab() {
+        tabs.forEach(tab => tab.classList.remove('active'));
+        const activeTabIndex = currentIndex % views.length;
+        tabs[activeTabIndex].classList.add('active');
+    }
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            currentIndex++;
+            updateActiveTab();
+            updateSlidePosition();
+        }, slideDuration);
+    }
+
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
+
+    // Pause on hover
+    const viewport = document.querySelector('.showcase-viewport');
+    viewport.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+    viewport.addEventListener('mouseleave', startAutoSlide);
+});
+
+                
+   
