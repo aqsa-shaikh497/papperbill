@@ -1945,33 +1945,34 @@ img {
 
         
 /* Restaurant Software Showcase */
+/* Restaurant Software Showcase */
+/* Restaurant Software Showcase */
 .software-showcase {
-    padding: 60px 5%;
-    background: var(--primary-dark);
+    padding: 80px 5%;
+    background: #f9f9f9;
     width: 100%;
     overflow: hidden;
+    background-color: var(--primary-dark);
 }
 
 .showcase-tabs {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-bottom: 30px;
+    gap: 15px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
-    padding: 0 10px;
 }
 
 .tab-btn {
-    padding: 12px 20px;
+    padding: 12px 25px;
     background: #e0e0e0;
     border: none;
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #333;
-    white-space: nowrap;
 }
 
 .tab-btn.active {
@@ -1984,146 +1985,133 @@ img {
     position: relative;
     width: 100%;
     overflow: hidden;
-    touch-action: pan-y; /* Better touch scrolling */
 }
 
 .view-track {
     display: flex;
-    width: 400%;
-    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    width: 400%; /* 4 slides */
+    transition: transform 0.6s ease-in-out;
 }
 
 .software-view {
-    width: 25%;
+    width: 25%; /* Each slide takes 25% of track */
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 20px;
-    background: var(--light-gray);
-    border-radius: 20px;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
     box-sizing: border-box;
+    background: var(--light-gray);
+    border-radius: 40px;
+    
 }
 
-.software-view h3 {
-    font-size: 1.8rem;
+.software-view h3{
+    font-size: 2.0rem;
     color: var(--primary-dark);
     text-align: center;
-    margin: 0 0 20px 0;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    margin-top: 0px;
 }
 
 .info-panel {
-    order: 1;
-    padding: 0;
+    flex: 1;
+    min-width: 10px; /* Fix for flexbox overflow */
+    margin-top: 0%;
+    padding: 5%;
+    padding-top: 0;
+    margin-bottom: 0%;
+    font-size: large;
 }
 
-.info-panel ul {
-    font-size: 1rem;
-    padding-left: 20px;
-    margin-bottom: 20px;
+.info-panel ul{
+    font-size: large;
+    padding-left: 30px;
 }
 
 .visual-panel {
-    order: 2;
-    width: 100%;
-    min-height: 250px;
-    border-radius: 15px;
+    flex: 1;
+    min-height: 400px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin: 3px;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .visual-panel img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: 400px;
+    object-fit: cover;
     padding: 20px;
-    margin: 0;
+    margin: 10px;
 }
 
-/* Tablet Layout (601px - 992px) */
-@media (min-width: 601px) and (max-width: 992px) {
+/* Responsive Design */
+@media (max-width: 992px) {
     .software-view {
-        flex-direction: row;
-        align-items: center;
-        gap: 40px;
-        padding: 30px;
-    }
-    
-    .info-panel {
-        flex: 1;
-        order: 0;
+        flex-direction: column;
+        gap: 30px;
+        border-radius: 40px;
+        padding: 0px;
+
     }
     
     .visual-panel {
-        flex: 1;
-        min-height: 350px;
-    }
-}
+        min-height: 300px;
+        width: 100%;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 3px;
+        margin-top: 3%;
+        margin-bottom: 3%;
 
-/* Desktop Layout (993px+) */
-@media (min-width: 993px) {
-    .software-view {
-        flex-direction: row;
-        align-items: center;
-        gap: 50px;
-        padding: 40px;
-        border-radius: 30px;
     }
     
     .info-panel {
-        flex: 1;
-    }
-    
-    .visual-panel {
-        flex: 1;
-        min-height: 400px;
-    }
-    
-    .visual-panel img {
-        padding: 40px;
+        order: -1;
+        padding-top: 0px;
     }
 }
 
-/* Mobile Enhancements */
-@media (max-width: 600px) {
-    .software-showcase {
-        padding: 40px 15px;
-    }
-    
+@media (max-width: 768px) {
     .showcase-tabs {
-        gap: 8px;
-        margin-bottom: 25px;
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding-bottom: 10px;
-        -webkit-overflow-scrolling: touch;
+        gap: 10px;
     }
     
     .tab-btn {
-        padding: 10px 16px;
-        font-size: 0.85rem;
-        flex: 0 0 auto;
-    }
-    
-    .software-view {
-        padding: 20px 15px;
-        border-radius: 15px;
-    }
-    
-    .software-view h3 {
-        font-size: 1.5rem;
-    }
-    
-    .info-panel ul {
+        padding: 10px 20px;
         font-size: 0.9rem;
-        padding-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .software-showcase {
+        padding: 60px 15px;
+    }
+    
+    .showcase-tabs {
+        justify-content: space-between;
+        gap: 5px;
+    }
+    
+    .tab-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        flex: 1;
+        text-align: center;
     }
     
     .visual-panel {
-        min-height: 200px;
-    }
-    
-    .visual-panel img {
-        padding: 15px;
+        min-height: 250px;
+        margin-top: 0%;
+        margin-bottom: 0%;
+
     }
 }
+
+
+
+
