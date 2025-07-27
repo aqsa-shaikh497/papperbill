@@ -1895,7 +1895,7 @@ img {
     .feature-title {
         font-size: 2rem;
         margin-bottom: 40px;
-        color: var(--white);
+        color: var(--white) !important;
     }
     
     .section-title {
