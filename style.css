@@ -74,7 +74,7 @@ header {
         position: relative;
     background: 
         linear-gradient(rgba(75, 85, 135, 0.4), rgba(157, 143, 208, 0.4)), /* White overlay */
-        url('../bg1.jpg') no-repeat center center;
+        url('bg1.jpg') no-repeat center center;
     background-size: cover;
         min-height: 80vh;
 
