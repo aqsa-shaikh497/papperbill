@@ -654,7 +654,7 @@ header {
     padding: 0 30px 0;
     color: var(--black);
     line-height: 1.6;
-    font-size: large;
+    font-size: medium !important;
 }
 
 .faq-item.active .faq-answer {
