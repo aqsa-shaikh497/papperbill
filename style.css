@@ -89,6 +89,12 @@ header {
     opacity: 0.9;
 }
 
+    .top-image {
+      display: block;
+      margin: 20px auto;
+      width: 200px; /* or any size you want */
+    }
+    
 .hero-content {
     position: relative;
     z-index: 2;
@@ -585,6 +591,23 @@ header {
   }
 
   @media (max-width: 480px) {
+
+      .hero h1 {
+    font-size: 1.8rem; /* Even smaller on very small devices */
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero::before {
+    opacity: 0.3; /* Even more subtle on small screens */
+  }
+}
+    .business-owner-cta-wrapper {
+      padding: 30px 0;
+      margin: 30px 0;
+    }
     .business-owner-cta {
       padding: 0 20px;
     }
@@ -602,7 +625,7 @@ header {
     .cta-button i {
       font-size: 1.2rem;
     }
-  }
+  
 
 /* FAQ Section */
 .faq-section {
@@ -655,6 +678,7 @@ header {
     color: var(--black);
     line-height: 1.6;
     font-size: medium !important;
+    text-align: justify;
 }
 
 .faq-item.active .faq-answer {
@@ -837,11 +861,13 @@ header {
     padding-top: 0;
     margin-bottom: 0%;
     font-size: large;
+    text-align: left;
 }
 
 .info-panel ul{
     font-size: large;
     padding-left: 30px;
+    text-align: left;
 }
 
 .visual-panel {
@@ -1114,11 +1140,14 @@ header {
         width: 100%;
         padding: 0;
         font-size: 0.9rem;
+        text-align: center;
     }
 
     .info-panel ul {
         font-size: 0.9rem;
         padding-left: 30px;
+        text-align: left;
+        
     }
 
     .software-view h3 {
@@ -1132,16 +1161,51 @@ header {
 @media (max-width: 600px) {
     .hero {
         min-height: 80vh;
+        text-align: center;
     }
+    .hero::before {
+    display: none; /* Hide the right-side image on mobile */
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    animation: fadeInUp 0.8s ease-out forwards;
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 25px;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  }
+
+  .oval-btn {
+    width: 100%;
+    max-width: 250px;
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
     
-    .hero-content {
-        margin-top: 0;
-        padding: 0 20px;
-    }
+
     
-    .hero h1 {
-        font-size: 2rem;
-    }
+
     
     .hero-description {
         font-size: 1rem;
@@ -1165,7 +1229,7 @@ header {
     .image-caption p {
         font-size: 1rem;
         line-height: 1.5;
-        text-align: left; /* Better for small screens than justify */
+        text-align: center !important; /* Better for small screens than justify */
     }
     
     .video-title{
@@ -1209,6 +1273,7 @@ header {
     .feature-content h3 {
         font-size: 1.5rem !important;
         margin-bottom: 15px !important;
+         text-align: center;
     }
 
     .feature-content p {
@@ -1239,7 +1304,7 @@ header {
     }
     
        .showcase-tabs {
-        display: flex;
+        display: none;
         overflow-x: auto; /* Enables horizontal scrolling */
         white-space: nowrap;
         padding: 8px 10px;
@@ -1282,6 +1347,18 @@ header {
 
 
 @media (max-width: 480px) {
+      .hero h1 {
+    font-size: 1.8rem; /* Even smaller on very small devices */
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero::before {
+    opacity: 0.3; /* Even more subtle on small screens */
+  }
+
     .hero h1 {
         font-size: 1.8rem;
     }
@@ -1309,12 +1386,13 @@ header {
         .image-caption h3 {
         font-size: 1.3rem !important;
         margin: 5px 0 12px 0 !important;
+        
     }
     
     .image-caption p {
         font-size: 1rem !important;
         line-height: 1.5 !important;
-        text-align: left !important; /* Change from justify for mobile */
+        text-align: left ; /* Change from justify for mobile */
     }
 
     .compact-grid {
