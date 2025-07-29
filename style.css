@@ -1562,12 +1562,13 @@ h2, h3, h4 {
         flex-direction: column;
         gap: 30px;
         padding: 20px;
-        background: var(--white);
+        background: transparent;
         border: 1px solid var(--medium-gray);
     }
     
     .feature-card.reverse {
         flex-direction: column;
+        background: transparent;
     }
     
     .feature-image img {
@@ -1615,6 +1616,7 @@ h2, h3, h4 {
     
     .feature-content h3 {
         font-size: 1.5rem;
+        color: var(--white);
     }
     
     .feature-content p {
@@ -1721,7 +1723,7 @@ h2, h3, h4 {
     
     .feature-content h3
     {
-        color: var(--primary-dark);
+        color: var(--white);
         padding-left: 0;
 
 
