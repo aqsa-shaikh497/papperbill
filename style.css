@@ -1172,6 +1172,10 @@ header {
         font-size: 1.8rem;
     }
     
+    .video-wrapper iframe {
+    height: 200px;
+    
+}
     .compact-grid {
 
         grid-template-columns:  1fr !important; /* 2 columns */
