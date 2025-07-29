@@ -671,7 +671,7 @@ h2, h3, h4 {
 .feature-card.reverse {
     flex-direction: row-reverse;
     background: transparent;
-        margin: 90px;
+    margin: 90px;
     padding: 50px;
 
 }
@@ -698,13 +698,14 @@ h2, h3, h4 {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 0px;
     border-radius: 30px;
+    max-height: 100px;
 }
 
 .feature-image img {
-    width: 100%;
-    height: 350px;
+    width: 90%;
+    height: 100px;
     display: block;
 }
 
@@ -1011,6 +1012,8 @@ h2, h3, h4 {
     
     .feature-card.reverse {
         flex-direction: column;
+        gap: 30px;
+
     }
     
     .compact-grid {
@@ -1569,6 +1572,12 @@ h2, h3, h4 {
     .feature-card.reverse {
         flex-direction: column;
         background: transparent;
+        padding: 20px;
+        border: 1px solid var(--medium-gray);
+        width: 100% !important;
+        gap: 30px;
+
+
     }
     
     .feature-image img {
@@ -1719,6 +1728,7 @@ h2, h3, h4 {
     
     .feature-content, .feature-image {
         padding: 0 15px;
+        min-height: 100px;
     }
     
     .feature-content h3
@@ -1780,6 +1790,9 @@ img {
     
     .feature-card.reverse {
         flex-direction: column;
+        width: 100% !important;
+        padding: 20px;
+    }
     }
     
     .feature-image img {
@@ -1798,7 +1811,7 @@ img {
         order: -1;
         margin-bottom: 30px;
     }
-}
+
 
 /* Small Tablet (600px - 768px) */
 @media (max-width: 768px) {
@@ -1947,7 +1960,6 @@ img {
         
 /* Restaurant Software Showcase */
 /* Restaurant Software Showcase */
-/* Restaurant Software Showcase */
 .software-showcase {
     padding: 80px 5%;
     background: #f9f9f9;
@@ -2087,15 +2099,15 @@ img {
 
     .visual-panel {
         width: 100%;
-        min-height: 250px;
-        height: auto;
-        margin: 0 auto 20px;
+        min-height: 200px;
+        height: 10px;
+        margin: 0 auto 10px;
     }
 
     .visual-panel img {
         width: 100%;
         height: auto;
-        max-height: 250px;
+        max-height: 200px;
         object-fit: contain;
         padding: 0;
         margin: 0;
@@ -2104,7 +2116,26 @@ img {
     .info-panel {
         width: 100%;
         padding: 0;
+        font-size: 0.9rem;
     }
+
+
+
+.info-panel ul{
+    font-size: 0.9rem;
+    padding-left: 30px;
+}
+
+.software-view h3{
+    font-size: 2.0rem;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: large;
+}
+
+
 }
 
 /* Small Mobile Devices (<480px) */
@@ -2120,7 +2151,31 @@ img {
     .visual-panel img {
         max-height: 200px;
     }
+        .info-panel {
+        width: 100%;
+        padding: 0;
+        font-size: 0.9rem;
+    }
+
+
+
+.info-panel ul{
+    font-size: 0.9rem;
+    padding-left: 30px;
 }
+
+.software-view h3{
+    font-size: 2.0rem;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: large;
+}
+
+
+}
+
 
 /* Prevent Horizontal Scrolling */
 @media (max-width: 767px) {
