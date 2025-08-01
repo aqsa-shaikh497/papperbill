@@ -136,8 +136,8 @@ header {
 
 /* Enhanced Oval Button */
 .oval-btn {
-    background: var(--primary-gradient);
-    color: var(--white);
+    background: var(--white);
+    color: var(--black);
     border: none;
     padding: 16px 48px;
     font-size: 1.15rem;
@@ -285,7 +285,7 @@ header {
 /* Video Section */
 .video-section {
     padding:  30px;
-    background: var(--primary-gradient);
+    background: var(--primary-color);
     text-align: center;
 }
 
@@ -317,7 +317,8 @@ header {
 /* Features Section */
 .features-section2 {
     padding: 80px 0;
-    background-color: var(--primary-dark);
+    background: var(--primary-gradient);
+
 }
 
 .section-title {
@@ -325,9 +326,18 @@ header {
     font-size: 2.5rem;
     margin-bottom: 20px;
     position: relative;
-    color: var(--white);
+    color: var(--primary-dark);
     font-family: 'Playfair Display', serif;
 
+}
+
+.section-title1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
 }
 
 .section-title::after {
@@ -373,7 +383,7 @@ header {
 
 .feature-content p {
     margin-bottom: 15px;
-    color: var(--medium-gray);
+    color: var(--light-gray);
     font-size: 1.3rem;
 }
 
@@ -413,6 +423,17 @@ header {
         gap: 20px !important;
         padding: 30px;
 
+}
+
+.compact-features i {
+    font-size: 32px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    padding: 16px;
+    background: var(--primary-gradient);
+         /* increased from 12px to 16px */
+ 
 }
 
 .compact-card {
@@ -647,6 +668,15 @@ header {
     background: var(--white);
 }
 
+.section-title2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
+}
+
 .faq-question {
     padding: 20px 30px;
     color: var(--black);
@@ -788,7 +818,7 @@ header {
     background: #f9f9f9;
     width: 100%;
     overflow: hidden;
-    background-color: var(--primary-dark);
+    background-color: var(--medium-gray);
 }
 
 .showcase-tabs {
@@ -839,7 +869,7 @@ header {
     gap: 40px;
     padding: 0 20px;
     box-sizing: border-box;
-    background: var(--light-gray);
+    background: transparent;
     border-radius: 40px;
 
 }
