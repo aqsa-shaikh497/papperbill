@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Billing</title>
+    <title>Garment Billing</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -184,7 +184,7 @@ header {
     position: relative;
     background: 
         linear-gradient(rgba(0, 1, 5, 0.4), rgba(1, 0, 5, 0.4),rgba(1,0,5,0.4)), /* White overlay */
-        url('bg1.jpg') no-repeat center center;
+        url('garment.jpg') no-repeat center center;
     background-size: cover;
     min-height: 93vh;
 }
@@ -399,7 +399,7 @@ header {
 /* Video Section */
 .video-section {
     padding:  30px;
-    background: var(--primary-color);
+    background: var(--white);
     text-align: center;
 }
 
@@ -953,151 +953,9 @@ header {
     opacity: 1;
 }
 
-/* Restaurant Software Showcase */
-.software-showcase {
-    padding: 80px 5%;
-    background: #f9f9f9;
-    width: 100%;
-    overflow: hidden;
-    background-color: var(--medium-gray);
-}
 
-.showcase-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
 
-.tab-btn {
-    padding: 12px 25px;
-    background: #e0e0e0;
-    border: none;
-    border-radius: 30px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-size: 1rem;
-    color: #333;
-}
 
-.tab-btn.active {
-    background: #0056b3;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.showcase-viewport {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: 600px;
-    margin-top: 0%;
-}
-
-.view-track {
-    display: flex;
-    width: 400%;
-    transition: transform 0.6s ease-in-out;
-    margin-bottom: 0%;
-}
-
-.software-view {
-    width: 25%;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding: 0 20px;
-    box-sizing: border-box;
-    background: transparent;
-    border-radius: 40px;
-
-}
-
-.software-view h3{
-    font-size: 2.0rem;
-    color: var(--primary-dark);
-    text-align: center;
-    margin-bottom: 50px;
-    padding-top: 10px;
-    margin-top: 0px;
-}
-
-.info-panel {
-    flex: 1;
-    min-width: 10px;
-    margin-top: 0%;
-    padding: 5%;
-    padding-top: 0;
-    margin-bottom: 0%;
-    font-size: large;
-    text-align: left;
-}
-
-.info-panel ul{
-    font-size: large;
-    padding-left: 30px;
-    text-align: left;
-}
-
-.visual-panel {
-    flex: 1;
-    min-height: 400px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    padding: 10px;
-    margin: 3px;
-    margin-top: 3%;
-    margin-bottom: 3%;
-}
-
-.visual-panel img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    padding: 20px;
-    margin: 10px;
-}
-
-/* Desktop Navigation */
-@media (min-width: 768px) {
-    .mobile-menu-btn {
-        display: none;
-    }
-    
-    .desktop-nav {
-        display: flex;
-        gap: 2rem;
-    }
-    
-    .desktop-nav a {
-        color: var(--dark);
-        text-decoration: none;
-        font-family: 'Lora', serif;
-        font-size: 1.1rem;
-        position: relative;
-        padding: 0.5rem 0;
-    }
-    
-    .desktop-nav a::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: var(--primary-gradient);
-        transition: width 0.3s ease;
-    }
-    
-    .desktop-nav a:hover::after {
-        width: 100%;
-    }
-
-        
-}
 
 
 
@@ -1263,70 +1121,8 @@ header {
         height: 200px;
     }
     
-    .software-showcase {
-        padding: 40px 15px;
-        overflow: hidden;
-    }
 
-    .showcase-viewport {
-        height: auto;
-        min-height: 500px;
-        overflow: visible;
-        position: relative;
-    }
-
-    .view-track {
-        display: flex;
-        width: 400%;
-        transition: transform 0.6s ease-in-out;
-        height: auto;
-    }
-
-    .software-view {
-        width: 25%;
-        flex-direction: column-reverse;
-        gap: 20px;
-        padding: 20px 15px;
-        height: auto;
-        box-sizing: border-box;
-    }
-
-    .visual-panel {
-        width: 100%;
-        min-height: 200px;
-        height: 10px;
-        margin: 0 auto 10px;
-    }
-
-    .visual-panel img {
-        width: 100%;
-        height: auto;
-        max-height: 200px;
-        object-fit: contain;
-        padding: 0;
-        margin: 0;
-    }
-
-    .info-panel {
-        width: 100%;
-        padding: 0;
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    .info-panel ul {
-        font-size: 0.9rem;
-        padding-left: 30px;
-        text-align: left;
-        
-    }
-
-    .software-view h3 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        padding-top: 0px;
-        margin-top: 0px;
-    }
+  
 }
 
 @media (max-width: 600px) {
@@ -1474,32 +1270,8 @@ header {
         font-size: 1rem;
     }
     
-       .showcase-tabs {
-        display: none;
-        overflow-x: auto; /* Enables horizontal scrolling */
-        white-space: nowrap;
-        padding: 8px 10px;
-        gap: 6px;
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    }
 
-    .tab-btn {
-        padding: 10px 18px;
-        font-size: 0.88rem;
-        border-radius: 24px;
-        flex: 0 0 auto; /* Prevent stretching */
-        margin: 0;
-    }
 
-    .tab-btn.active {
-        background: #0062c4;
-        box-shadow: 0 3px 6px rgba(0, 86, 179, 0.25);
-    }
-
-    /* Hide scrollbar (optional) */
-    .showcase-tabs::-webkit-scrollbar {
-        display: none;
-    }
 }
     
     .rating-container {
@@ -1635,17 +1407,15 @@ header {
         overflow-x: hidden;
         width: 100%;
     }
-    
-    .software-showcase {
-        width: 100%;
-    }
+
 }
     </style>
+
+
 </head>
 <body>
     <!-- Header -->
     <header>
-
         <nav class="navbar">
         <div class="container navbar-container">
             <a href="#" class="logo">
@@ -1657,15 +1427,12 @@ header {
             </button>
             
             <ul class="nav-links" id="nav-links">
-                <li><a href="#"><i class="/index.html"></i> Restaurant</a></li>
-                <li><a href="/garments.html" class="active"><i class="fas fa-bread-slice"></i> Garment</a></li>
-        
+                <li><a href="index.html"><i class="/index.html"></i> Restaurant</a></li>
+                <li><a href="garments.html" class="active"><i class="fas fa-bread-slice"></i> Garment</a></li>
                 <li><a href="#" ><i class="fas fa-download"></i> Download</a></li>
             </ul>
         </div>
     </nav>
-
-
     </header>
 
 
@@ -1673,11 +1440,11 @@ header {
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Restaurant Billing Software</h1>
+            <h1>Garment & Cloth Shop Billing Software</h1>
             <p class="hero-description">
-                Power your restaurant with smart billing—auto-sync tables, live inventory tracking, and kitchen orders that eliminate errors and speed up service.
+                Power your clothing store with smart billing—automatically manage counter sales, track live inventory of sizes and styles, and streamline orders to reduce errors and speed up checkout.
             </p>
-            <button class="oval-btn">Download Restaurant Billing Software</button>
+            <button class="oval-btn">Download Garment Billing Software</button>
         </div>
     </section>
 
@@ -1689,42 +1456,47 @@ header {
 </div>
 
     <!-- Features Section -->
-     <section class="features-section" style="background-color: #f8f9fa;">
+     <section class="features-section" style="background-color:white" >
   <div class="container1">
-    <h1 class="feature-title">Powerful Features Tailored for Restaurant Success</h1>
+    <h1 class="feature-title">Powerful Features Tailored for Garment & Cloth Sop  Billing</h1>
     
     <div class="image-grid1">
       <!-- Row 1 -->
       <div class="image-card">
-        <img src="order.png" alt="Advanced Order Management System">
+        <img src="gretail.png" alt="Advanced Order Management System">
         <div class="image-caption">
-          <h3>Order Management</h3>
-          <p>Track your restaurant's supply levels efficiently with Paperbill’s real-time Order Management tools. From monitoring ingredients to setting alerts for low inventory, this feature ensures smooth kitchen operations. It reduces waste, simplifies purchasing, and supports smarter stock decisions—perfect for single outlets or large chains alike.</p>
+          <h3>Set Retail & Whole Price</h3>
+          <p>Simplify pricing for every customer type—whether retail or bulk—with our Garment Billing Software. Easily manage separate price lists, apply discounts, and track margins to maximize profit.
+            Update product prices in one go, offer flexible deals, and keep inventory aligned with real-time pricing strategies.</p>
         </div>
       </div>
 
       <div class="image-card">
-        <img src="table.webp" alt="Smart Table Management Solution">
+        <img src="gdiscount.png" alt="Smart Table Management Solution">
         <div class="image-caption">
-          <h3>Table Management</h3>
-          <p>With Paperbill, managing tables becomes seamless. Enable staff to handle reservations, monitor active orders, and generate bills effortlessly. Whether during rush hour or quiet times, this system keeps your dining area organized, improving turnaround and enhancing customer satisfaction.</p>
+          <h3>Discount Management</h3>
+          <p>Paperbill’s Garment Billing Software makes it easy to create and apply discounts that attract customers and boost sales. Whether it’s seasonal offers, loyalty deals, or bulk purchase discounts, Paperbill automates the process for speed and accuracy.
+            Track performance in real-time, fine-tune strategies, and ensure every bill reflects your pricing perfectly. With Paperbill, you’re not just managing discounts—you’re turning them into growth.</p>
         </div>
       </div>
       
       <!-- Row 2 -->
       <div class="image-card">
-        <img src="kitchen.png" alt="Efficient Kitchen Display System">
+        <img src="gbilling.png" alt="Efficient Kitchen Display System">
         <div class="image-caption">
-          <h3>Multiple Kitchen Management</h3>
-          <p>Operate separate kitchen stations smoothly with Paperbill’s intelligent routing. Orders are automatically directed to the correct kitchen based on dish type, reducing delays and miscommunication. Designed for efficiency, it empowers kitchen teams to deliver faster and more accurately.</p>
+          <h3>Customize Billing</h3>
+          <p>Customize invoices, branding elements, item details, taxes, and pricing schemes to suit every business need. Paperbill’s garment billing software gives you full control over how your bills look and function—ideal for bulk orders, special pricing, and professional presentation.
+Add your store logo, choose from modern templates, and deliver invoices that leave a lasting impression.</p>
         </div>
       </div>
       
       <div class="image-card">
-        <img src="billing.png" alt="Comprehensive Billing and Analytics">
+        <img src="gorder.png" alt="Comprehensive Billing and Analytics">
         <div class="image-caption">
-          <h3>Billing & Insights</h3>
-          <p>Generate instant GST-compliant bills while gaining access to powerful reports. From sales metrics to payment breakdowns, Paperbill offers a full view of your business health. Integrated with digital payments and accounting software, it reduces effort and boosts financial clarity.</p>
+          <h3>Order Management</h3>
+          <p>Paperbill’s Garment Billing Software simplifies order management by giving you real-time visibility from order placement to delivery. Easily track order status, manage customer-specific requests, and reduce fulfillment errors.
+
+With built-in inventory sync, you’ll always know what’s in stock—avoiding delays and improving turnaround time.</p>
         </div>
       </div>
     </div>
@@ -1740,7 +1512,7 @@ header {
     <section class="compact-features">
         <div class="container">
             <div class="paperbill-header">
-                <h1 class="subsection-title">Boost Your Restaurant Business with PaperBill App's Features</h1>
+                <h1 class="subsection-title">Enhance Your Garment Shop Efficiency with PaperBill's Advanced Tools</h1>
             </div>
             
             <div class="compact-grid">
@@ -1786,6 +1558,37 @@ header {
                     <h4>Transaction</h4>
  
             </div>
+            <div class="compact-card" data-feature="multi-store">
+                    <div class="feature-icon" style="color: white;"><i class="fas fa-store-alt"></i></div>
+                    <h4>Multi Store Management</h4>
+                </div>
+
+
+
+                <!-- Set Retail & Whole Price -->
+                <div class="compact-card" data-feature="pricing">
+                    <div class="feature-icon" style="color: white;"><i class="fas fa-tag"></i></div>
+                    <h4>Set Retail & Whole Price</h4>
+                </div>
+
+
+
+                <!-- Manage Sale & Purchase -->
+                <div class="compact-card" data-feature="sale-purchase">
+                    <div class="feature-icon" style="color: white;"><i class="fas fa-exchange-alt"></i></div>
+                    <h4>Manage Sale & Purchase</h4>
+                </div>
+
+
+                <!-- Bulk Update Items -->
+                <div class="compact-card" data-feature="bulk-update">
+                    <div class="feature-icon" style="color: white;"><i class="fas fa-box-open"></i></div>
+                    <h4>Bulk Update Items</h4>
+                </div>
+
+
+
+            </div>
             
         </div>
     </section>
@@ -1804,7 +1607,7 @@ header {
                 <p>Stay in control of your kitchen stock with Paperbill’s smart inventory tracking system. Easily monitor item availability, prevent shortages, and restock just in time. This helps reduce food waste and ensures you never run out during peak hours—keeping service fast and efficient.</p>
             </div>
             <div class="feature-image">
-                <img src="inventory.png" alt="Inventory Management">
+                <img src="ginventory.png" alt="Inventory Management">
             </div>
         </div>
         
@@ -1815,7 +1618,7 @@ header {
                 <p>Make billing faster with just a tap. Paperbill lets you print or share receipts instantly, whether through a printer or directly to the customer’s phone. It’s a hassle-free way to keep things moving during busy hours while keeping records organized.</p>
             </div>
             <div class="feature-image">
-                <img src="oneclick.png" alt="One Click Print">
+                <img src="gprrint.png" alt="One Click Print">
             </div>
         </div>
         
@@ -1826,7 +1629,7 @@ header {
                 <p>Paperbill makes it easy to apply and adjust taxes or special discounts. Set up GST, VAT, or item-based offers in just a few steps. With automatic application during billing, compliance and accuracy are guaranteed—no manual effort required.</p>
             </div>
             <div class="feature-image">
-                <img src="tax.png" alt="Taxes and Discounts">
+                <img src="gdiscount.png" alt="Taxes and Discounts">
             </div>
         </div>
 
@@ -1837,7 +1640,7 @@ header {
                 <p>Monitor everything from one place—sales, orders, and inventory across multiple branches. Paperbill’s centralized dashboard helps you make informed decisions with real-time data, giving you complete operational visibility in a user-friendly format.</p>
             </div>
             <div class="feature-image">
-                <img src="RESDashboad.png" alt="Inventory Management">
+                <img src="gdashboard.png" alt="Inventory Management">
             </div>
         </div>
         
@@ -1848,14 +1651,10 @@ header {
                 <p>Simplify tax season with auto-generated, error-free reports. Paperbill organizes and calculates your tax data, allowing quick report exports for smooth filings. Say goodbye to paperwork and focus more on running your restaurant.</p>
             </div>
             <div class="feature-image">
-                <img src="taxreport.png" alt="One Click Print">
+                <img src="greport.png" alt="One Click Print">
             </div>
         </div>
-        
-  
-
-        
-        <!-- Feature 8 -->
+    
 
         
         <!-- Feature 9 -->
@@ -1865,7 +1664,7 @@ header {
                 <p>Drive more footfall with targeted discounts and promotional campaigns. Paperbill allows you to create personalized deals for specific customers, items, or time periods, and tracks their performance so you can fine-tune your marketing.</p>
             </div>
             <div class="feature-image">
-                <img src="discount.png" alt="Offers">
+                <img src="gdiscount.png" alt="Offers">
             </div>
         </div>
 
@@ -1876,7 +1675,7 @@ header {
                 <p>Avoid service interruptions with automatic low-stock and expiry alerts. Paperbill notifies you in advance so you can reorder or replace items on time—keeping operations smooth and customers happy.</p>
             </div>
             <div class="feature-image">      
-              <img src="expire.png" alt="Stock Alert">
+              <img src="gdashboard.png" alt="Stock Alert">
             </div>
         </div>
         
@@ -1889,11 +1688,49 @@ header {
                 <p>Give your customers the flexibility to pay their way. Paperbill supports cash, cards, UPI, wallets, and more—ensuring a smooth and secure checkout process every time.</p>
             </div>
             <div class="feature-image">
-                <img src="transac.png" alt="Payment Options">
+                <img src="gtransac.png" alt="Payment Options">
             </div>
         </div>
         
         <!-- Feature 13 -->
+                 <div class="feature-card ">
+            <div class="feature-content">
+                <h3>Multi Store Management</h3>
+                <p>PaperBill's Garment & Textile Billing Software is designed to simplify multi-store management by offering a unified platform to monitor and control all your garment shop locations in real-time. Whether you're tracking sales, managing inventory, or analyzing store performance, PaperBill gives you complete visibility and control from one dashboard.</p>
+            </div>
+            <div class="feature-image">      
+              <img src="gmulti.png" alt="Stock Alert">
+            </div>
+        </div>
+
+          <div class="feature-card reverse">
+            <div class="feature-content">
+                <h3>Set Retail & Whole Price</h3>
+                <p>PaperBill lets you define multiple pricing levels for each product, including retail and wholesale rates. This allows you to sell the same item at different prices based on the customer type.ly switch between pricing modes during billing to ensure accuracy and flexibility.</p>
+            </div>
+            <div class="feature-image">
+                <img src="gretail.png" alt="One Click Print">
+            </div>
+        </div>
+                <div class="feature-card ">
+            <div class="feature-content">
+                <h3>Manage Sale & Purchase</h3>
+                <p>PaperBill makes it easy to manage both sales and purchases from a single platform. You can create professional GST-compliant sale invoices, track customer payments, and monitor outstanding dues with ease. On the purchase side, record supplier bills, update stock automatically, and keep track of all expenses.</p>
+            </div>
+            <div class="feature-image">      
+              <img src="gsp.png" alt="Stock Alert">
+            </div>
+        </div>
+
+         <div class="feature-card reverse">
+            <div class="feature-content">
+                <h3>Bulk Update Items</h3>
+                <p>With PaperBill, updating multiple items is fast and hassle-free using the Bulk Update feature. Whether you want to change prices, stock quantities, tax rates, or item details across hundreds of products, you can do it all in just a few clicks. </p>
+            </div>
+            <div class="feature-image">
+                <img src="gbulk.png" alt="One Click Print">
+            </div>
+        </div>
 
         
 
@@ -1902,7 +1739,7 @@ header {
 
 <section class="video-section">
     <div class="container3">
-        <h2 class="video-title">Watch How PaperBill Simplifies Restaurant Billing</h2>
+        <h2 class="video-title">Watch How PaperBill Simplifies Garment Billing</h2>
         <div class="video-wrapper">
             <!-- Replace with your actual YouTube embed code -->
             <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -1912,71 +1749,6 @@ header {
 
 <!--<section id="addons-section"-->
 
-
-<section class="software-showcase">
-        <h2 class="section-title">Add – ons to Supercharge Your Restaurant & Food Billing Software</h2>
-
-    <div class="showcase-tabs">
-        <button class="tab-btn active" data-view="operations">Operations</button>
-        <button class="tab-btn" data-view="support">Support</button>
-        <button class="tab-btn" data-view="loyalty">Loyalty</button>
-        <button class="tab-btn" data-view="analytics">Analytics</button>
-    </div>
-
-    <div class="showcase-viewport">
-        <div class="view-track">
-            <!-- Operations View -->
-            <div class="software-view active" data-view="operations">
-                <div class="info-panel">
-                    <h3>Restaurant Operations</h3>
-                    <p style="color:black ">Manage tables, staff, and inventory seamlessly with our intuitive restaurant management system. Effortlessly handle table assignments to optimize seating, schedule staff shifts to match peak hours, and maintain full control over inventory to reduce waste and ensure smooth operations. Everything you need to run your restaurant efficiently is at your fingertips.</p>
-
-  
-                </div>
-                <div class="visual-panel">
-                    <img src="operations.jpg" alt="Operations Dashboard">
-                </div>
-            </div>
-
-            <!-- Support View -->
-            <div class="software-view" data-view="support">
-                <div class="info-panel">
-                    <h3>24/7 Customer Support</h3>
-                    <p style="color:black ">Get help whenever you need it with support from our specialized team. Whether it’s through live chat, phone support, or on-site training, we’re here to ensure your operations run smoothly and efficiently. Our dedicated experts are ready to assist you at every step, so you’re never alone in managing your restaurant.</p>
-
-
-                </div>
-                <div class="visual-panel">
-                    <img src="customer.jpg" alt="Support Features">
-                </div>
-            </div>
-
-            <!-- Loyalty View -->
-            <div class="software-view" data-view="loyalty">
-                <div class="info-panel">
-                    <h3>Loyalty Programs</h3>
-                    <p style="color:black ">Build stronger customer relationships with personalized rewards that keep guests coming back. Offer digital loyalty cards, create exclusive VIP tiers for frequent diners, and surprise customers with special birthday rewards. These engaging features help boost customer satisfaction, increase retention, and make every visit more rewarding.</p>
-
-                </div>
-                <div class="visual-panel">
-                    <img src="loyalityy.jpg" alt="Loyalty Program">
-                </div>
-            </div>
-
-            <!-- Analytics View -->
-            <div class="software-view" data-view="analytics">
-                <div class="info-panel">
-                    <h3>Business Analytics</h3>
-                    <p style="color:black ">Make data-driven decisions with our intelligent tools that provide detailed sales reports, customer insights, and inventory trends. With these analytics, you can monitor performance, understand buying behavior, and manage stock more effectively to drive smarter business growth.</p>
-
-                </div>
-                <div class="visual-panel">
-                    <img src="analytics.jpg" alt="Analytics Dashboard">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 <div class="business-owner-cta-wrapper">
@@ -1992,78 +1764,98 @@ header {
 </div>
 
  <!-- faq-->
-    <section class="faq-section">
-            <h2 class="section-title2" >Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Is Paperbill really free to use?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, Paperbill offers a completely free version with all essential features for small retailers including unlimited invoicing, basic inventory management, and expense tracking. There's also a premium version with additional capabilities like multi-user access, advanced reporting, and priority support for growing businesses.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Can I use Paperbill without internet?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Absolutely! Paperbill works completely offline, and your data syncs automatically when you're back online. This makes it perfect for areas with unreliable internet connections. All features including invoicing, inventory management, and reporting are available offline.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>How does Paperbill help with GST compliance?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Paperbill automatically generates GST-compliant invoices with all required fields including HSN/SAC codes, GSTIN, and tax breakdowns. It prepares GSTR-1 and GSTR-3B reports that can be directly uploaded to the GST portal. The software also tracks input tax credit and calculates your tax liability automatically.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Can I access my data on multiple devices?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, Paperbill allows you to access your business data across multiple devices. Your data syncs securely between your phone, tablet, and computer. With premium plans, you can have multiple users accessing the same business data simultaneously from different devices.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>What is restaurant billing software</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Restaurant billing software is a digital tool designed to streamline the billing process in restaurants. It helps restaurant owners and managers keep track of orders, generate bills, process payments, and maintain records of sales and transactions.</p>
-                </div>
-            </div>
-                        <div class="faq-item">
-                <div class="faq-question">
-                    <span>Can PaperBill's food court billing software handle multiple outlets in a food court?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, PaperBill's food court billing software is perfect for managing multiple outlets in a food court. The software helps you streamline billing for each counter, track sales separately, and generate comprehensive reports for better performance management. It ensures efficient coordination and smooth operations across the outlets.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>Does PaperBill's cafe billing software support mobile billing?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, PaperBill's cafe billing software supports mobile billing, allowing cafe owners to process orders and payments directly from a mobile device. This flexibility is particularly useful in small cafes where space and time efficiency are crucial.</p>
-                </div>
-            </div>
+<section class="faq-section">
+    <h2 class="section-title2">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Which software is best for garment shops?</span>
+            <span>+</span>
+        </div>
+        <div class="faq-answer">
+            <p>PaperBill is an excellent billing software solution for garment and textile shops in India. It offers all the necessary tools for smooth store management, including fast billing, inventory tracking, and expense monitoring. With PaperBill, you can save time, reduce errors, and focus more on growing your business.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Does PaperBill App provide a free demo?</span>
+            <span>+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes, PaperBill offers a free demo so you can try out all its features before committing. It allows you to create bills in just a click and get hands-on experience with its simple and intuitive interface.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Is PaperBill suitable for textile billing?</span>
+            <span>+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Absolutely. PaperBill is designed keeping the garment and textile business in mind. It understands industry-specific needs like size/variant-based inventory, bulk orders, and seasonal stock, making it a reliable choice for textile billing.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Do I need a trained employee to operate PaperBill?</span>
+            <span>+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Not at all. PaperBill is user-friendly and easy to learn. Most staff can get used to it within a few hours, and no special training is required to generate bills or manage inventory.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What are the benefits of using billing software in a garment store?</span>
+            <span>+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Using billing software like PaperBill simplifies your entire billing process. It speeds up checkout, manages inventory in real-time, tracks customer purchases, and helps with GST billing. Overall, it enhances customer experience and improves business efficiency.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Is PaperBill secure for storing customer data?</span>
+            <span>+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes. PaperBill ensures your data is encrypted and safely stored. Saving customer info allows faster repeat billing, managing loyalty discounts, and building better customer relationships.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>How much does PaperBill cost for garment shops?</span>
+            <span>+</span>
+        </div>
+        <div class="faq-answer">
+            <p>PaperBill offers a free version with essential features. For access to advanced tools like analytics, custom invoices, and full inventory automation, you can opt for an affordable yearly subscription. A free trial is also available for the premium features.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Does PaperBill support cash drawer integration?</span>
+            <span>+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes. PaperBill supports cash drawer functionality on its Android version, allowing seamless cash handling at your billing counter.</p>
+        </div>
+    </div>
+</section>
+
+            
         </section>
 
     <!--rating-->
     <div class="rating-container">
   <h3 class="rating-title">How useful was this post?</h3>
   
-  <div class="star-rating">
+<div class="star-rating">
     <!-- Interactive Stars -->
     <div class="stars-interactive">
       <span class="star" data-value="1">★</span>
@@ -2089,7 +1881,378 @@ header {
     
 
 
-    <script src="script.js"></script>
+    <script>
+        // ============ MAIN DOCUMENT READY FUNCTION ============
+document.addEventListener('DOMContentLoaded', function() {
+  // ============ MOBILE MENU TOGGLE ============
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+
+  // Initialize aria attributes
+  mobileMenuBtn.setAttribute('aria-expanded', 'false');
+  mobileMenuBtn.setAttribute('aria-label', 'Toggle menu');
+
+  // ============ SMOOTH SCROLLING ============
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+      // Close mobile menu after clicking
+      mobileNav.classList.remove('active');
+    });
+  });
+
+  // ============ FEATURE CARDS ANIMATION ============
+  const featureCards = document.querySelectorAll('.feature-card');
+  
+  featureCards.forEach(card => {
+    card.style.transition = 'all 0.3s ease-out';
+    
+    // Mouse enter animation
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-10px)';
+      this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
+      this.style.zIndex = '10';
+    });
+    
+    // Mouse leave animation
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+      this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.05)';
+      this.style.zIndex = '1';
+    });
+
+    // Touch devices support
+    card.addEventListener('touchstart', function() {
+      this.style.transform = 'translateY(-10px)';
+      this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
+    }, {passive: true});
+
+    card.addEventListener('touchend', function() {
+      this.style.transform = 'translateY(0)';
+      this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.05)';
+    }, {passive: true});
+  });
+
+  // ============ BUTTON ANIMATIONS ============
+  // Download button
+  const downloadBtn = document.querySelector('.download-btn');
+  downloadBtn.addEventListener('click', function() {
+    console.log("Download button clicked!");
+    this.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      this.style.transform = 'scale(1)';
+    }, 150);
+  });
+
+  // All buttons hover effect
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-3px)';
+    });
+    
+    btn.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+
+    // Ripple effect
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const x = e.clientX - e.target.getBoundingClientRect().left;
+      const y = e.clientY - e.target.getBoundingClientRect().top;
+      
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+      
+      this.appendChild(ripple);
+      
+      setTimeout(() => {
+        ripple.remove();
+      }, 1000);
+    });
+  });
+
+//fixed button
+  document.querySelector('.floating-btn').addEventListener('click', function() {
+  // Add your download functionality here
+  window.location.href = '#download'; // or your download link
+});
+
+  // ============ SCROLL ANIMATIONS ============
+  function animateOnScroll() {
+    const elements = document.querySelectorAll('.feature-card, .compact-card');
+    elements.forEach(el => {
+      const elementPosition = el.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.2;
+      
+      if(elementPosition < screenPosition) {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }
+    });
+  }
+
+  // Set initial state
+  const animatedElements = document.querySelectorAll('.feature-card, .compact-card');
+  animatedElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'all 0.6s ease';
+  });
+
+  // Initialize animations
+  window.addEventListener('load', animateOnScroll);
+  window.addEventListener('scroll', animateOnScroll);
+
+  // ============ TAB SYSTEM ============
+document.addEventListener('DOMContentLoaded', function() {
+    // Tab System
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    // Function to switch tabs
+    function switchTab(tabId) {
+        // Remove active class from all buttons and contents
+        tabButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+        });
+        
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Add active class to clicked button and corresponding content
+        const activeButton = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+        const activeContent = document.getElementById(tabId);
+        
+        if (activeButton && activeContent) {
+            activeButton.classList.add('active');
+            activeButton.setAttribute('aria-selected', 'true');
+            activeContent.classList.add('active');
+        }
+    }
+    
+    // Add click event to tab buttons
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-tab');
+            switchTab(tabId);
+        });
+    });
+    
+    // Initialize first tab as active by default
+    if (tabButtons.length > 0) {
+        tabButtons[0].setAttribute('aria-selected', 'true');
+    }
+});
+  // ============ RATING SYSTEM ============
+   document.querySelectorAll('.star').forEach(star => {
+    // Display current average (4.83 = 96.6% of 5 stars)
+    if (star.dataset.value <= 4) {
+      star.classList.add('active');
+    } else if (star.dataset.value < 5) {
+      star.style.color = '#FFD700';
+      star.style.width = '66%';
+      star.style.overflow = 'hidden';
+      star.style.display = 'inline-block';
+    }
+
+    // Interactive rating
+    star.addEventListener('click', function() {
+      const value = this.dataset.value;
+      const stars = document.querySelectorAll('.star');
+      
+      stars.forEach(s => {
+        s.classList.remove('active');
+        s.style.color = '';
+        s.style.width = '';
+      });
+      
+      for (let i = 0; i < value; i++) {
+        stars[i].classList.add('active');
+      }
+      
+      document.querySelector('.thank-you').classList.add('show');
+      console.log(`User rated: ${value} stars`);
+    });
+  });
+
+  document.querySelectorAll('.star').forEach(star => {
+    // Display current average rating (4.83)
+    const averageRating = 4.83;
+    const starValue = parseInt(star.dataset.value);
+    
+    // Full stars for whole numbers
+    if (starValue <= Math.floor(averageRating)) {
+        star.classList.add('active');
+    } 
+    // Partial star for decimal
+    else if (starValue === Math.ceil(averageRating)) {
+        const percentage = (averageRating - Math.floor(averageRating)) * 100;
+        star.innerHTML = '★';
+        star.style.position = 'relative';
+        star.style.display = 'inline-block';
+        star.style.color = '#ccc'; // Base color
+        
+        // Create partial fill effect
+        star.innerHTML += `<span style="position: absolute; left: 0; top: 0; width: ${percentage}%; overflow: hidden; color: #FFD700;">★</span>`;
+    }
+    
+    // Interactive rating
+    star.addEventListener('click', function() {
+        const value = parseInt(this.dataset.value);
+        const stars = document.querySelectorAll('.star');
+        const ratingDisplay = document.querySelector('.current-rating .average');
+        const thankYou = document.querySelector('.thank-you');
+        
+        // Update visual stars
+        stars.forEach((s, index) => {
+            s.classList.toggle('active', index < value);
+            s.style.color = '';
+            s.innerHTML = '★'; // Reset partial stars
+            
+            // Remove any existing partial star spans
+            if (s.querySelector('span')) {
+                s.querySelector('span').remove();
+            }
+        });
+        
+        // Update displayed rating
+        ratingDisplay.textContent = value.toFixed(2);
+        
+        // Show thank you message
+        thankYou.classList.add('show');
+        setTimeout(() => thankYou.classList.remove('show'), 2000);
+        
+        console.log(`User rated: ${value} stars`);
+        
+        // Here you would typically send the rating to your server
+        // sendRatingToServer(value);
+    });
+});
+
+
+        // FAQ accordion functionality//
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        // Add toggle icon if it doesn't exist
+        if (!question.querySelector('.toggle-icon')) {
+            const icon = document.createElement('span');
+            icon.className = 'toggle-icon';
+            icon.textContent = '+';
+            question.appendChild(icon);
+        }
+        
+        question.addEventListener('click', () => {
+            // Close all other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                    const otherIcon = otherItem.querySelector('.toggle-icon');
+                    if (otherIcon) {
+                        otherIcon.textContent = '+';
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+            
+            // Update icon
+            const icon = question.querySelector('.toggle-icon');
+            if (icon) {
+                if (item.classList.contains('active')) {
+                    icon.textContent = '×'; // or '−' for minus
+                    icon.style.transform = 'rotate(45deg)';
+                } else {
+                    icon.textContent = '+';
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+    });
+});
+
+  // ============ HERO ANIMATION ============
+  const heroContent = document.querySelector('.hero-content');
+  heroContent.style.opacity = '0';
+  heroContent.style.transform = 'translateY(20px)';
+  heroContent.style.transition = 'all 0.8s ease';
+  
+  setTimeout(() => {
+    heroContent.style.opacity = '1';
+    heroContent.style.transform = 'translateY(0)';
+  }, 100);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Feature card animations
+    const featureCards = document.querySelectorAll('.compact-card');
+    
+    // Animate cards on load
+    featureCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+        
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, 100);
+    });
+    
+    // Add click event to feature cards
+    featureCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const feature = this.getAttribute('data-feature');
+            console.log(`Feature selected: ${feature}`);
+            // Add your feature click handling here
+        });
+    });
+    
+    // Add intersection observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    featureCards.forEach(card => {
+        observer.observe(card);
+    });
+});
+ 
+    </script>
 </body>
 </html>
 
