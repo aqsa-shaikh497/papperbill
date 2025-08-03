@@ -405,7 +405,7 @@ header {
 
 .video-title {
     font-size: 2.5rem;
-    color: var(--white);
+    color: var(--primary-dark);
     margin-bottom: 40px;
     font-weight: 700;
     font-family: 'Playfair Display', serif;
@@ -1407,7 +1407,7 @@ header {
         overflow-x: hidden;
         width: 100%;
     }
-
+    
 }
     </style>
 
@@ -1682,7 +1682,7 @@ With built-in inventory sync, you’ll always know what’s in stock—avoiding 
 
         
         <!-- Feature 12 -->
-        <div class="feature-card reverse"> 
+        <div class="feature-card reverse"> ">
             <div class="feature-content">
                 <h3>Transaction</h3>
                 <p>Give your customers the flexibility to pay their way. Paperbill supports cash, cards, UPI, wallets, and more—ensuring a smooth and secure checkout process every time.</p>
@@ -2251,7 +2251,127 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 });
- 
+
+// ============ SLIDER FUNCTIONALITY ============
+
+document.addEventListener('DOMContentLoaded', function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const navButtons = document.querySelectorAll('.nav-btn');
+    let autoSlideInterval;
+    const SLIDE_INTERVAL = 3000;
+    // 3 seconds
+
+    // Initialize slider on page load
+    function initSlider() {
+        updateSlider();
+        startAutoSlide();
+        
+        // Optional: Pause on hover for better UX
+        const sliderContainer = document.querySelector('.slider-container');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', pauseAutoSlide);
+            sliderContainer.addEventListener('mouseleave', resumeAutoSlide);
+        }
+    }
+
+    function updateSlider() {
+        const slider = document.querySelector('.slider');
+        if (slider) {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        navButtons.forEach((btn, index) => {
+            btn.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+        resetAutoSlide();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlider();
+    }
+
+    function startAutoSlide() {
+        if (!autoSlideInterval) {
+            autoSlideInterval = setInterval(nextSlide, SLIDE_INTERVAL);
+        }
+    }
+
+    function pauseAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+    }
+
+    function resumeAutoSlide() {
+        if (!autoSlideInterval) {
+            startAutoSlide();
+        }
+    }
+
+    function resetAutoSlide() {
+        pauseAutoSlide();
+        startAutoSlide();
+    }
+
+    // Initialize everything when page loads
+    initSlider();
+
+    // Add click handlers for navigation buttons
+    navButtons.forEach((button, index) => {
+        button.addEventListener('click', () => goToSlide(index));
+    });
+
+    // Optional: Clean up interval when leaving page
+    window.addEventListener('beforeunload', pauseAutoSlide);
+});
+
+
+// Tab functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // FAQ accordion functionality//
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+
+
+                
+   
     </script>
 </body>
 </html>
